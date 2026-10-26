@@ -160,6 +160,22 @@
           "qrDecodedData": "CIDCO-FIRE-CERT-VERIFY:NO=CIDCO/FIRE/2025/9821:STATUS=VALID:EXP=2027-12-31",
           "digitalSignatureStatus": "verified",
           "digitalSignatureDetails": "Signed by Chief Fire Officer CIDCO"
+        },
+        {
+          "id": "doc-1793016162612-33yh1",
+          "applicationId": "app-001",
+          "filename": "1793016161003-368356134.pdf",
+          "originalName": "PCE-Annual-Report-2024-25-Silver-Jubilee-Year.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 316,
+          "sha256Hash": "f057a33ffd23f7d985e0c927bc1fed58c91ed27f48c7783dae1e8fbd8f271c66",
+          "docCategory": "Other Supporting Document",
+          "pageCount": 1,
+          "extractedText": "\n\n-- 1 of 1 --\n\n",
+          "extractedFields": [],
+          "uploadTimestamp": "2026-10-26T12:02:42.612Z",
+          "digitalSignatureStatus": "unverified"
         }
       ],
       "findings": [
@@ -649,6 +665,16 @@
     }
   ],
   "auditTrail": [
+    {
+      "id": "audit-1793016162612-4l6prm",
+      "timestamp": "2026-10-26T12:02:42.612Z",
+      "actorName": "Administrator",
+      "actorRole": "Administrator",
+      "action": "UPLOAD_DOCUMENTS",
+      "recordId": "app-001",
+      "outcome": "SUCCESS",
+      "details": "Uploaded 1 files. SHA-256 hashed and indexed."
+    },
     {
       "id": "audit-1792992321306-m5kxb2",
       "timestamp": "2026-10-26T05:25:21.306Z",

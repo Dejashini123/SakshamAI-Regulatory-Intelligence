@@ -1,160 +1,128 @@
-    details = `Issuing authority gateway timed out or endpoint is currently unavailable.`;
-  }
-
-  const attempt: AuthenticationAttempt = {
-    id: `auth-${Date.now()}`,
-    documentId: targetDoc.id,
-    applicationId: targetApp.id,
-    type: 'issuing_authority_api',
-    authorityName: authorityName || 'Demonstration Issuing Authority Gateway',
-    referenceNumber: referenceNumber || 'REF-DEMO-01',
-    endpointUrl: `https://verification.authority.gov.in/api/v1/records/${encodeURIComponent(referenceNumber || 'demo')}`,
-    timestamp: new Date().toISOString(),
-    status,
-    responseDetails: details,
-    verifiedByActor: db.activeRole
+    generatedAt: new Date().toISOString(),
+    regulatoryStatement: 'LEGAL DISCLAIMER: This document represents an AI-assisted preliminary regulatory decision-support assessment and does NOT constitute final statutory approval or rejection. Final administrative decisions rest exclusively with the AICTE Executive Committee.',
+    application: {
+      id: app.applicationId,
+      name: app.institutionName,
+      pid: app.institutionIdentifier,
+      category: app.category,
+      academicYear: app.academicYear,
+      status: app.status,
+      submissionDate: app.submissionDate,
+      approvedIntake: app.approvedIntake,
+      requestedIntake: app.requestedIntake,
+      programmes: app.programmesList
+    },
+    documentsSummary: app.documents.map(d => ({
+      originalName: d.originalName,
+      category: d.docCategory,
+      sha256: d.sha256Hash,
+      fieldsCount: d.extractedFields.length,
+      digitalSignatureStatus: d.digitalSignatureStatus
+    })),
+    validationScore: app.preliminaryScore,
+    findings: app.findings,
+    authenticationRecords: auths,
+    anomalyAlerts: anomalies,
+    reviewerNotes: app.reviewerNotes,
+    assessingOfficer: db.activeRole
   };
 
-  db.authentications.unshift(attempt);
-  logAudit(db, db.activeRole, db.activeRole, 'OFFICIAL_SOURCE_VERIFY', targetDoc.id, status === 'Verified by authorized source' ? 'SUCCESS' : 'WARNING', `${authorityName} check: ${status}`);
-  saveDB(db);
-
-  res.json({ success: true, attempt });
+  res.json(report);
 });
 
-// Manual Verification Action by Officer
-app.post('/api/authentication/manual', (req: Request, res: Response) => {
+// CSV Export
+app.get('/api/reports/export/csv', (_req: Request, res: Response) => {
   const db = getDB();
-  const { documentId, authorityName, referenceNumber, status, comments } = req.body;
+  const headers = [
+    'Application ID',
+    'Institution Name',
+    'PID',
+    'Category',
+    'Academic Year',
+    'Status',
+    'Approved Intake',
+    'Requested Intake',
+    'Deficiencies',
+    'Warnings',
+    'Last Validated'
+  ];
 
-  let targetDoc: DocumentRecord | null = null;
-  let targetApp: Application | null = null;
+  const rows = db.applications.map(a => [
+    `"${a.applicationId}"`,
+    `"${a.institutionName.replace(/"/g, '""')}"`,
+    `"${a.institutionIdentifier}"`,
+    `"${a.category}"`,
+    `"${a.academicYear}"`,
+    `"${a.status}"`,
+    a.approvedIntake,
+    a.requestedIntake,
+    a.preliminaryScore?.deficiencies || 0,
+    a.preliminaryScore?.warnings || 0,
+    `"${a.lastValidatedAt || 'N/A'}"`
+  ]);
 
-  for (const a of db.applications) {
-    const d = a.documents.find(doc => doc.id === documentId);
-    if (d) {
-      targetDoc = d;
-      targetApp = a;
-      break;
-    }
-  }
-
-  if (!targetDoc || !targetApp) {
-    return res.status(404).json({ error: 'Document not found' });
-  }
-
-  const attempt: AuthenticationAttempt = {
-    id: `auth-${Date.now()}`,
-    documentId: targetDoc.id,
-    applicationId: targetApp.id,
-    type: 'manual_verification',
-    authorityName: authorityName || 'Manual Regulatory Verification',
-    referenceNumber: referenceNumber || 'MANUAL-REF',
-    timestamp: new Date().toISOString(),
-    status: status || 'Verified by authorized source',
-    responseDetails: comments || 'Verified in person by authorized verification officer.',
-    verifiedByActor: db.activeRole
-  };
-
-  db.authentications.unshift(attempt);
-  logAudit(db, db.activeRole, db.activeRole, 'MANUAL_VERIFY', targetDoc.id, 'RECORDED', `Manual officer verification: ${status}. Comments: ${comments}`);
-  saveDB(db);
-
-  res.json({ success: true, attempt });
+  const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+  res.setHeader('Content-Type', 'text/csv');
+  res.setHeader('Content-Disposition', 'attachment; filename="AICTE_Applications_Summary.csv"');
+  res.send(csvContent);
 });
 
-// 10. Review Actions (Confirm / Dismiss Findings with Reason)
-app.post('/api/reviews/action', (req: Request, res: Response) => {
-  const db = getDB();
-  const { applicationId, findingId, action, reason } = req.body;
+// 15. Demo Reset & Test Scenario Loader
+app.post('/api/demo/reset', (_req: Request, res: Response) => {
+  const freshData = seedDatabase();
+  saveDB(freshData);
+  res.json({ success: true, message: 'Database reset to initial demonstration state with 5 synthetic test institutions.' });
+});
 
-  const app = db.applications.find(a => a.id === applicationId);
-  if (!app) return res.status(404).json({ error: 'Application not found' });
+// Explicit API 404 handler (ensures unknown API routes return JSON 404 instead of falling back to HTML)
+app.all('/api/*', (_req: Request, res: Response) => {
+  res.status(404).json({ error: 'API route not found' });
+});
 
-  if (findingId) {
-    const finding = app.findings.find(f => f.id === findingId);
-    if (finding) {
-      if (action === 'confirm_finding') {
-        finding.reviewStatus = 'confirmed';
-        finding.reviewerNotes = reason || 'Confirmed by reviewer.';
-        finding.reviewedBy = db.activeRole;
-        finding.reviewedAt = new Date().toISOString();
-      } else if (action === 'dismiss_finding') {
-        if (!reason || reason.trim().length < 5) {
-          return res.status(400).json({ error: 'A substantive justification reason is required to dismiss a finding.' });
-        }
-        finding.reviewStatus = 'dismissed';
-        finding.reviewerNotes = reason;
-        finding.reviewedBy = db.activeRole;
-        finding.reviewedAt = new Date().toISOString();
+// Serve asset images statically in both dev and production
+app.use('/src/assets/images', express.static(path.resolve(process.cwd(), 'src/assets/images')));
+
+// Mount Vite (dev) or dist static files (production)
+async function startServer() {
+  const isProduction = process.env.NODE_ENV === 'production';
+  const distIndexExists = fs.existsSync(path.resolve(process.cwd(), 'dist', 'index.html'));
+
+  if (isProduction || distIndexExists) {
+    const distPath = path.resolve(process.cwd(), 'dist');
+    console.log(`Serving production frontend from ${distPath}`);
+    app.use(express.static(distPath));
+
+    app.get('*', (_req, res) => {
+      res.sendFile(path.join(distPath, 'index.html'));
+    });
+  } else {
+    console.log('Mounting Vite dev middleware');
+    const { createServer: createViteServer } = await import('vite');
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: 'spa'
+    });
+    app.use(vite.middlewares);
+
+    app.use('*', async (req, res, next) => {
+      if (req.originalUrl.startsWith('/api')) {
+        return res.status(404).json({ error: 'API route not found' });
       }
-    }
+      try {
+        const url = req.originalUrl;
+        let template = fs.readFileSync(path.resolve(process.cwd(), 'index.html'), 'utf-8');
+        template = await vite.transformIndexHtml(url, template);
+        res.status(200).set({ 'Content-Type': 'text/html' }).end(template);
+      } catch (e: any) {
+        vite.ssrFixStacktrace(e);
+        next(e);
+      }
+    });
   }
 
-  logAudit(
-    db, 
-    db.activeRole, 
-    db.activeRole, 
-    action.toUpperCase(), 
-    findingId || applicationId, 
-    'RECORDED', 
-    `Action: ${action}. Justification: ${reason}`
-  );
-  saveDB(db);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`AICTE SAKSHAM Full-Stack Server running on http://0.0.0.0:${PORT}`);
+  });
+}
 
-  res.json({ success: true, application: app });
-});
-
-// 11. Compliance Rules Management
-app.get('/api/rules', (_req: Request, res: Response) => {
-  const db = getDB();
-  res.json(db.rules);
-});
-
-app.post('/api/rules', (req: Request, res: Response) => {
-  const db = getDB();
-  const { name, category, description, severity, sourceReference, conditionType } = req.body;
-
-  if (!name || !category) {
-    return res.status(400).json({ error: 'Name and Category are required.' });
-  }
-
-  const newRule: ComplianceRule = {
-    id: `rule-${Date.now()}`,
-    ruleId: `RULE-CUSTOM-${Math.floor(100 + Math.random() * 900)}`,
-    name: name.trim(),
-    category,
-    description: description || '',
-    severity: severity || 'major',
-    sourceReference: sourceReference || 'Configured Demonstration Rule',
-    effectiveDate: '2026-04-01',
-    version: '2026.1',
-    isEnabled: true,
-    isDemonstrationRule: true,
-    conditionType: conditionType || 'document_presence'
-  };
-
-  db.rules.unshift(newRule);
-  logAudit(db, db.activeRole, db.activeRole, 'CREATE_RULE', newRule.id, 'SUCCESS', `Created compliance rule ${newRule.ruleId}: ${newRule.name}`);
-  saveDB(db);
-
-  res.status(201).json(newRule);
-});
-
-app.patch('/api/rules/:id/toggle', (req: Request, res: Response) => {
-  const db = getDB();
-  const rule = db.rules.find(r => r.id === req.params.id);
-  if (!rule) return res.status(404).json({ error: 'Rule not found' });
-
-  rule.isEnabled = !rule.isEnabled;
-  logAudit(db, db.activeRole, db.activeRole, 'TOGGLE_RULE', rule.id, 'SUCCESS', `Rule ${rule.ruleId} set to ${rule.isEnabled ? 'ENABLED' : 'DISABLED'}`);
-  saveDB(db);
-
-  res.json(rule);
-});
-
-// 12. Audit Trail & Anomaly Alerts
-app.get('/api/audit-trail', (_req: Request, res: Response) => {
-  const db = getDB();
-  res.json(db.auditTrail);
-});
+startServer().catch(err => {

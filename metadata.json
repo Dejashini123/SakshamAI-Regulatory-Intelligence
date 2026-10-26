@@ -1,0 +1,8 @@
+{
+  "name": "AICTE SAKSHAM — Regulatory Compliance & Verification Portal",
+  "description": "AI-assisted regulatory decision-support system for technical institutions' Extension of Approval (EoA) and compliance validation with real document processing, consistency engine, and audit trails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,831 @@
+{
+  "applications": [
+    {
+      "id": "app-001",
+      "applicationId": "AICTE-2026-EOA-10928",
+      "institutionName": "Saraswati College of Engineering and Technology",
+      "institutionIdentifier": "1-10928374",
+      "category": "Extension of Approval (EoA)",
+      "academicYear": "2026-2027",
+      "submissionDate": "2026-10-18T10:30:00Z",
+      "institutionType": "Engineering & Technology",
+      "state": "Maharashtra",
+      "status": "Preliminary Validation",
+      "approvedIntake": 420,
+      "requestedIntake": 420,
+      "programmesList": [
+        "B.Tech Computer Engineering (120)",
+        "B.Tech Mechanical Engineering (60)",
+        "B.Tech Electronics & Telecommunication (120)",
+        "B.Tech Information Technology (120)"
+      ],
+      "reviewerNotes": "Preliminary algorithmic validation passed. All mandatory statutory documents verified with consistent Permanent Institute ID.",
+      "lastValidatedAt": "2026-10-24T14:20:00Z",
+      "preliminaryScore": {
+        "passedChecks": 7,
+        "warnings": 1,
+        "deficiencies": 0,
+        "unresolvedCount": 0
+      },
+      "documents": [
+        {
+          "id": "doc-001-1",
+          "applicationId": "app-001",
+          "filename": "affidavit_saraswati_eoa_2026.pdf",
+          "originalName": "Affidavit_1_StampPaper_2026.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 1048576,
+          "sha256Hash": "a7c4e5f2991038baec701e89b21f3c8a9120de8409384729104829fae1092837",
+          "docCategory": "Affidavit / Undertaking",
+          "pageCount": 3,
+          "extractedText": "AFFIDAVIT ON NON-JUDICIAL STAMP PAPER RS 100\nI, Dr. Arvind S. Kulkarni, Secretary of Saraswati Educational Trust, do hereby solemnly affirm that Saraswati College of Engineering and Technology, Permanent Institute ID: 1-10928374, Kharghar, Navi Mumbai complies with all AICTE norms for Academic Year 2026-2027.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Saraswati College of Engineering and Technology",
+              "page": 1,
+              "snippet": "Saraswati College of Engineering and Technology",
+              "confidence": 0.99
+            },
+            {
+              "key": "pid",
+              "label": "Permanent Institute ID",
+              "value": "1-10928374",
+              "page": 1,
+              "snippet": "Permanent Institute ID: 1-10928374",
+              "confidence": 1
+            },
+            {
+              "key": "academic_year",
+              "label": "Academic Year",
+              "value": "2026-2027",
+              "page": 1,
+              "snippet": "Academic Year 2026-2027",
+              "confidence": 0.98
+            },
+            {
+              "key": "deponent_name",
+              "label": "Deponent Name",
+              "value": "Dr. Arvind S. Kulkarni",
+              "confidence": 0.98,
+              "page": 1,
+              "snippet": "I, Dr. Arvind S. Kulkarni, Secretary of Saraswati Educational Trust"
+            },
+            {
+              "key": "deponent_title",
+              "label": "Deponent Title",
+              "value": "Secretary",
+              "confidence": 0.98,
+              "page": 1,
+              "snippet": "Secretary of Saraswati Educational Trust"
+            },
+            {
+              "key": "trust_name",
+              "label": "Trust Name",
+              "value": "Saraswati Educational Trust",
+              "confidence": 0.97,
+              "page": 1,
+              "snippet": "Saraswati Educational Trust"
+            },
+            {
+              "key": "permanent_institute_id",
+              "label": "Permanent Institute ID",
+              "value": "1-10928374",
+              "confidence": 1,
+              "page": 1,
+              "snippet": "Permanent Institute ID: 1-10928374"
+            },
+            {
+              "key": "location",
+              "label": "Location",
+              "value": "Kharghar, Navi Mumbai",
+              "confidence": 0.95,
+              "page": 1,
+              "snippet": "Kharghar, Navi Mumbai"
+            },
+            {
+              "key": "stamp_value",
+              "label": "Stamp Value",
+              "value": "Rs 100",
+              "confidence": 0.95,
+              "page": 1,
+              "snippet": "AFFIDAVIT ON NON-JUDICIAL STAMP PAPER RS 100"
+            }
+          ],
+          "uploadTimestamp": "2026-10-18T10:35:00Z",
+          "qrDecodedData": "AICTE-VERIFY:PID=1-10928374:APP=AICTE-2026-EOA-10928:YEAR=2026-27:HASH=a7c4e5f2",
+          "digitalSignatureStatus": "verified",
+          "digitalSignatureDetails": "Signed by Arvind S. Kulkarni (Cert Authority: eMudhra Sub-CA 2025, Valid until 2027-11-04)"
+        },
+        {
+          "id": "doc-001-2",
+          "applicationId": "app-001",
+          "filename": "fire_safety_noc_saraswati.pdf",
+          "originalName": "CIDCO_Fire_Safety_NOC_2026.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 812400,
+          "sha256Hash": "b482910cda938e70192830f819203948572019a8273648190283746581920384",
+          "docCategory": "Fire Safety Certificate",
+          "pageCount": 2,
+          "extractedText": "CIDCO FIRE SERVICES DEPARTMENT\nFIRE SAFETY RENEWAL CERTIFICATE\nCertificate No: CIDCO/FIRE/2025/9821\nIssued To: Saraswati College of Engineering and Technology (PID: 1-10928374)\nValid From: 01-Jan-2026 To: 31-Dec-2027.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Saraswati College of Engineering and Technology",
+              "page": 1,
+              "snippet": "Saraswati College of Engineering and Technology",
+              "confidence": 0.98
+            },
+            {
+              "key": "certificate_no",
+              "label": "Certificate Number",
+              "value": "CIDCO/FIRE/2025/9821",
+              "page": 1,
+              "confidence": 0.97
+            },
+            {
+              "key": "expiry_date",
+              "label": "Expiry Date",
+              "value": "2027-12-31",
+              "page": 1,
+              "snippet": "To: 31-Dec-2027",
+              "confidence": 0.99
+            }
+          ],
+          "uploadTimestamp": "2026-10-18T10:36:00Z",
+          "qrDecodedData": "CIDCO-FIRE-CERT-VERIFY:NO=CIDCO/FIRE/2025/9821:STATUS=VALID:EXP=2027-12-31",
+          "digitalSignatureStatus": "verified",
+          "digitalSignatureDetails": "Signed by Chief Fire Officer CIDCO"
+        }
+      ],
+      "findings": [
+        {
+          "id": "f-001-1",
+          "applicationId": "app-001",
+          "ruleId": "RULE-EOA-MAND-DOCS",
+          "category": "Document Completeness",
+          "severity": "info",
+          "title": "Mandatory Statutory EoA Bundle Complete",
+          "explanation": "Affidavit-1, Fire Safety Certificate, and Land Documents were detected and authenticated successfully.",
+          "evidence": {
+            "sourceDocument": "affidavit_saraswati_eoa_2026.pdf",
+            "page": 1,
+            "snippet": "Saraswati College of Engineering and Technology (PID: 1-10928374)"
+          },
+          "confidence": 0.98,
+          "recommendedNextAction": "Proceed with routine committee approval clearance.",
+          "validationMethod": "rule-based",
+          "reviewStatus": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "app-002",
+      "applicationId": "AICTE-2026-EOA-49201",
+      "institutionName": "Vidya Sagar Institute of Technology",
+      "institutionIdentifier": "1-49201923",
+      "category": "Extension of Approval (EoA)",
+      "academicYear": "2026-2027",
+      "submissionDate": "2026-10-19T14:15:00Z",
+      "institutionType": "Engineering & Technology",
+      "state": "Karnataka",
+      "status": "Rectification Requested",
+      "approvedIntake": 360,
+      "requestedIntake": 360,
+      "programmesList": [
+        "B.E. Computer Science (120)",
+        "B.E. Electronics & Communication (120)",
+        "B.E. Civil Engineering (60)",
+        "B.E. Mechanical Engineering (60)"
+      ],
+      "reviewerNotes": "Deficiency: Mandatory Fire & Life Safety Certificate was omitted from the uploaded intake package. Rectification notice served.",
+      "lastValidatedAt": "2026-10-23T11:10:00Z",
+      "preliminaryScore": {
+        "passedChecks": 4,
+        "warnings": 1,
+        "deficiencies": 2,
+        "unresolvedCount": 2
+      },
+      "documents": [
+        {
+          "id": "doc-002-1",
+          "applicationId": "app-002",
+          "filename": "vidya_sagar_undertaking.pdf",
+          "originalName": "Undertaking_Affidavit_2026.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 940000,
+          "sha256Hash": "c901928401928374658192039485720192837465819203948572019283746581",
+          "docCategory": "Affidavit / Undertaking",
+          "pageCount": 2,
+          "extractedText": "UNDERTAKING FOR EXTENSION OF APPROVAL\nVidya Sagar Institute of Technology, Bangalore. PID: 1-49201923.\nAffidavit submitted for EoA 2026-2027. Land area: 10.5 Acres.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Vidya Sagar Institute of Technology",
+              "page": 1,
+              "confidence": 0.96
+            },
+            {
+              "key": "pid",
+              "label": "Permanent Institute ID",
+              "value": "1-49201923",
+              "page": 1,
+              "confidence": 0.99
+            }
+          ],
+          "uploadTimestamp": "2026-10-19T14:20:00Z"
+        }
+      ],
+      "findings": [
+        {
+          "id": "f-002-1",
+          "applicationId": "app-002",
+          "ruleId": "RULE-EOA-MAND-DOCS",
+          "category": "Document Completeness",
+          "severity": "critical",
+          "title": "Missing Mandatory Document: Fire Safety Certificate",
+          "explanation": "AICTE APH 2026-27 Section 2.1 requires an active Fire & Emergency Services NOC. No corresponding document was uploaded.",
+          "evidence": {
+            "snippet": "Missing document type: Fire Safety Certificate"
+          },
+          "confidence": 1,
+          "recommendedNextAction": "Issue immediate automated rectification notice to applicant institution requesting valid municipal Fire NOC.",
+          "validationMethod": "rule-based",
+          "reviewStatus": "confirmed",
+          "reviewerNotes": "Confirmed by Regulatory Reviewer. Missing statutory safety certificate.",
+          "reviewedBy": "Rajesh Varma (Reviewing Officer)",
+          "reviewedAt": "2026-10-23T11:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": "app-003",
+      "applicationId": "AICTE-2026-EOA-77281",
+      "institutionName": "Dr. B.R. Ambedkar Polytechnic Institute",
+      "institutionIdentifier": "1-77281920",
+      "category": "Extension of Approval (EoA)",
+      "academicYear": "2026-2027",
+      "submissionDate": "2026-10-20T09:40:00Z",
+      "institutionType": "Polytechnic Diploma",
+      "state": "Uttar Pradesh",
+      "status": "Human Review",
+      "approvedIntake": 240,
+      "requestedIntake": 240,
+      "programmesList": [
+        "Diploma Civil Engineering (60)",
+        "Diploma Electrical Engineering (60)",
+        "Diploma Mechanical Engineering (60)",
+        "Diploma Automobile Engineering (60)"
+      ],
+      "reviewerNotes": "Potential anomaly detected: The registered land lease agreement uploaded expired on 31-Dec-2025. Requires official land registrar verification.",
+      "lastValidatedAt": "2026-10-24T16:05:00Z",
+      "preliminaryScore": {
+        "passedChecks": 5,
+        "warnings": 1,
+        "deficiencies": 1,
+        "unresolvedCount": 1
+      },
+      "documents": [
+        {
+          "id": "doc-003-1",
+          "applicationId": "app-003",
+          "filename": "ambedkar_poly_land_lease.pdf",
+          "originalName": "Registered_Lease_Deed_Expired.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 1420000,
+          "sha256Hash": "d839201948572019283746581920394857201928374658192039485720192837",
+          "docCategory": "Land & Building Ownership Document",
+          "pageCount": 5,
+          "extractedText": "DEED OF LEASE\nBetween Uttar Pradesh State Industrial Development Corp and Dr. B.R. Ambedkar Polytechnic Institute.\nLease Period: Twenty Years starting 01-Jan-2006 terminating on 31-Dec-2025.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Dr. B.R. Ambedkar Polytechnic Institute",
+              "page": 1,
+              "confidence": 0.97
+            },
+            {
+              "key": "expiry_date",
+              "label": "Lease Expiry Date",
+              "value": "2025-12-31",
+              "page": 2,
+              "snippet": "terminating on 31-Dec-2025",
+              "confidence": 0.99
+            }
+          ],
+          "uploadTimestamp": "2026-10-20T09:45:00Z"
+        }
+      ],
+      "findings": [
+        {
+          "id": "f-003-1",
+          "applicationId": "app-003",
+          "ruleId": "RULE-LAND-VALIDITY",
+          "category": "Date & Expiry",
+          "severity": "critical",
+          "title": "Expired Land Lease Agreement Detected",
+          "explanation": "The extracted termination date of the campus lease deed is 31-Dec-2025. This predates the proposed academic year 2026-2027.",
+          "evidence": {
+            "sourceDocument": "ambedkar_poly_land_lease.pdf",
+            "page": 2,
+            "snippet": "terminating on 31-Dec-2025"
+          },
+          "confidence": 0.99,
+          "recommendedNextAction": "Require proof of lease renewal from UPSIDC or Sub-Registrar stamp office.",
+          "validationMethod": "rule-based",
+          "reviewStatus": "flagged"
+        }
+      ]
+    },
+    {
+      "id": "app-004",
+      "applicationId": "AICTE-2026-INTAKE-38291",
+      "institutionName": "Shri Krishna Institute of Applied Sciences",
+      "institutionIdentifier": "1-38291044",
+      "category": "Intake Change",
+      "academicYear": "2026-2027",
+      "submissionDate": "2026-10-21T11:00:00Z",
+      "institutionType": "Management (MBA/PGDM)",
+      "state": "Tamil Nadu",
+      "status": "Pending Verification",
+      "approvedIntake": 180,
+      "requestedIntake": 240,
+      "programmesList": [
+        "MBA Finance (60)",
+        "MBA Marketing (60)",
+        "MBA Business Analytics (60 - Proposed +60)"
+      ],
+      "reviewerNotes": "Cross-document discrepancy: Affiliation letter spells name as \"Sri Krishna Inst. of Applied Sciences and Research\" with conflicting permanent code.",
+      "lastValidatedAt": "2026-10-24T18:30:00Z",
+      "preliminaryScore": {
+        "passedChecks": 5,
+        "warnings": 2,
+        "deficiencies": 0,
+        "unresolvedCount": 2
+      },
+      "documents": [
+        {
+          "id": "doc-004-1",
+          "applicationId": "app-004",
+          "filename": "shri_krishna_affidavit.pdf",
+          "originalName": "Affidavit_Intake_Increase.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 920000,
+          "sha256Hash": "e192039485720192837465819203948572019283746581920394857201928374",
+          "docCategory": "Affidavit / Undertaking",
+          "pageCount": 3,
+          "extractedText": "AFFIDAVIT FOR INTAKE EXPANSION\nShri Krishna Institute of Applied Sciences, Coimbatore (PID: 1-38291044).\nApplication for additional 60 seats in MBA Business Analytics.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Shri Krishna Institute of Applied Sciences",
+              "page": 1,
+              "confidence": 0.98
+            },
+            {
+              "key": "pid",
+              "label": "Permanent Institute ID",
+              "value": "1-38291044",
+              "page": 1,
+              "confidence": 1
+            }
+          ],
+          "uploadTimestamp": "2026-10-21T11:10:00Z"
+        },
+        {
+          "id": "doc-004-2",
+          "applicationId": "app-004",
+          "filename": "univ_affiliation_krishna.pdf",
+          "originalName": "Anna_University_Affiliation_2026.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 740000,
+          "sha256Hash": "f201928374658192039485720192837465819203948572019283746581920394",
+          "docCategory": "University Affiliation Letter",
+          "pageCount": 2,
+          "extractedText": "CENTRE FOR AFFILIATION OF INSTITUTIONS - ANNA UNIVERSITY\nProvisional Affiliation for Academic Year 2026-2027 granted to:\nSri Krishna Inst. of Applied Sciences and Research (PID: 1-38291099).\nApproved Programmes: MBA (180 seats).",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Sri Krishna Inst. of Applied Sciences and Research",
+              "page": 1,
+              "confidence": 0.94
+            },
+            {
+              "key": "pid",
+              "label": "Permanent Institute ID",
+              "value": "1-38291099",
+              "page": 1,
+              "confidence": 0.99
+            }
+          ],
+          "uploadTimestamp": "2026-10-21T11:12:00Z"
+        }
+      ],
+      "findings": [
+        {
+          "id": "f-004-1",
+          "applicationId": "app-004",
+          "ruleId": "RULE-PID-CONSISTENCY",
+          "category": "Cross-Document Consistency",
+          "severity": "major",
+          "title": "Cross-Document PID Mismatch Flagged",
+          "explanation": "Affidavit lists AICTE PID as \"1-38291044\", whereas Anna University affiliation letter cites PID \"1-38291099\".",
+          "evidence": {
+            "fieldA": {
+              "label": "PID in Affidavit",
+              "value": "1-38291044",
+              "doc": "shri_krishna_affidavit.pdf"
+            },
+            "fieldB": {
+              "label": "PID in Affiliation Letter",
+              "value": "1-38291099",
+              "doc": "univ_affiliation_krishna.pdf"
+            },
+            "snippet": "PID conflict between 1-38291044 and 1-38291099"
+          },
+          "confidence": 0.99,
+          "recommendedNextAction": "Conduct API check with Anna University Affiliation Portal or request verified corrigendum.",
+          "validationMethod": "rule-based",
+          "reviewStatus": "flagged"
+        }
+      ]
+    },
+    {
+      "id": "app-005",
+      "applicationId": "AICTE-2026-EOA-89301",
+      "institutionName": "Universal Global Academy of Technology",
+      "institutionIdentifier": "1-89301922",
+      "category": "Extension of Approval (EoA)",
+      "academicYear": "2026-2027",
+      "submissionDate": "2026-10-22T16:20:00Z",
+      "institutionType": "Engineering & Technology",
+      "state": "Haryana",
+      "status": "Human Review",
+      "approvedIntake": 300,
+      "requestedIntake": 300,
+      "programmesList": [
+        "B.Tech Artificial Intelligence & Data Science (120)",
+        "B.Tech Cyber Security (60)",
+        "B.Tech Robotics & Automation (120)"
+      ],
+      "reviewerNotes": "CRITICAL ANOMALY: Uploaded building plan certificate is an exact cryptographic SHA-256 duplicate of a certificate submitted by another institution in 2025.",
+      "lastValidatedAt": "2026-10-24T19:00:00Z",
+      "preliminaryScore": {
+        "passedChecks": 4,
+        "warnings": 1,
+        "deficiencies": 2,
+        "unresolvedCount": 2
+      },
+      "documents": [
+        {
+          "id": "doc-005-1",
+          "applicationId": "app-005",
+          "filename": "universal_building_plan_reuse.pdf",
+          "originalName": "Architect_Building_Safety_Certificate.pdf",
+          "fileType": "pdf",
+          "mimeType": "application/pdf",
+          "sizeBytes": 1102000,
+          "sha256Hash": "a7c4e5f2991038baec701e89b21f3c8a9120de8409384729104829fae1092837",
+          "isDuplicateOfHash": "a7c4e5f2991038baec701e89b21f3c8a9120de8409384729104829fae1092837",
+          "docCategory": "Building Plan & Occupancy Certificate",
+          "pageCount": 3,
+          "extractedText": "REGISTERED ARCHITECT OCCUPANCY CERTIFICATE\nBuilt-up Area: 14,200 sq. meters. Fire egress doors: Compliant with NBC 2016 Part 4.",
+          "extractedFields": [
+            {
+              "key": "institution_name",
+              "label": "Institution Name",
+              "value": "Universal Global Academy of Technology",
+              "page": 1,
+              "confidence": 0.88
+            },
+            {
+              "key": "area",
+              "label": "Total Built-up Area",
+              "value": "14,200 sq. m",
+              "page": 1,
+              "confidence": 0.95
+            }
+          ],
+          "uploadTimestamp": "2026-10-22T16:25:00Z",
+          "qrDecodedData": "COA-INDIA-ARCHITECT-REG:CA/2012/58912:VALID=2026",
+          "digitalSignatureStatus": "unverified",
+          "digitalSignatureDetails": "Self-signed certificate with untrusted root authority."
+        }
+      ],
+      "findings": [
+        {
+          "id": "f-005-1",
+          "applicationId": "app-005",
+          "category": "Anomaly Alert",
+          "severity": "critical",
+          "title": "Potential Anomaly: Exact SHA-256 Duplicate File Detected",
+          "explanation": "This uploaded file is byte-for-byte identical (SHA-256 hash match) to a document uploaded in another application record (doc-001-1).",
+          "evidence": {
+            "sourceDocument": "universal_building_plan_reuse.pdf",
+            "snippet": "SHA-256: a7c4e5f2991038baec701e89b21f3c8a9120de8409384729104829fae1092837"
+          },
+          "confidence": 1,
+          "recommendedNextAction": "Flag application for physical on-site Expert Visiting Committee (EVC) scrutiny.",
+          "validationMethod": "rule-based",
+          "reviewStatus": "confirmed",
+          "reviewerNotes": "Investigating potential file recycling across distinct trust applicants.",
+          "reviewedBy": "Dr. Sunita Deshmukh (Verification Officer)",
+          "reviewedAt": "2026-10-24T19:30:00Z"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule-eoa-001",
+      "ruleId": "RULE-EOA-MAND-DOCS",
+      "name": "Mandatory EoA Document Bundle Completeness",
+      "category": "Extension of Approval (EoA)",
+      "description": "Extension of Approval applications must include Affidavit-1, Building Safety/Fire NOC, and Affiliating University NOC.",
+      "severity": "critical",
+      "sourceReference": "AICTE Approval Process Handbook 2026-27, Chapter II, Clause 2.1",
+      "effectiveDate": "2026-04-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "document_presence",
+      "requiredDocType": "Fire Safety Certificate"
+    },
+    {
+      "id": "rule-eoa-002",
+      "ruleId": "RULE-EOA-FIRE-EXPIRY",
+      "name": "Fire & Life Safety Certificate Validity Period",
+      "category": "All Categories",
+      "description": "Fire Safety Certificate must be valid throughout the academic session (must not expire prior to June 30, 2026).",
+      "severity": "critical",
+      "sourceReference": "AICTE Approval Process Handbook 2026-27, Clause 2.4(a)",
+      "effectiveDate": "2026-04-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "validity_date"
+    },
+    {
+      "id": "rule-eoa-003",
+      "ruleId": "RULE-PID-CONSISTENCY",
+      "name": "AICTE Permanent Institute ID (PID) Cross-Consistency",
+      "category": "All Categories",
+      "description": "Permanent Institute ID (PID) on all supporting affidavits, land records, and previous approval orders must match the application identifier exactly.",
+      "severity": "critical",
+      "sourceReference": "AICTE Regulation Bureau Circular AICTE/RB/2026/CONSIST",
+      "effectiveDate": "2026-01-15",
+      "version": "2026.2",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "consistency_match"
+    },
+    {
+      "id": "rule-eoa-004",
+      "ruleId": "RULE-NAME-MATCH",
+      "name": "Legal Institution Name Exact & Normalized Alignment",
+      "category": "All Categories",
+      "description": "Institution Name stated across Land documents, Affiliation Letters, and Society Undertaking must match within acceptable phonetical/abbreviation tolerances.",
+      "severity": "major",
+      "sourceReference": "AICTE Approval Process Handbook 2026-27, Appendix 16",
+      "effectiveDate": "2026-04-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "consistency_match"
+    },
+    {
+      "id": "rule-eoa-005",
+      "ruleId": "RULE-LAND-VALIDITY",
+      "name": "Land Ownership / Registered Lease Agreement Validity",
+      "category": "Extension of Approval (EoA)",
+      "description": "For leased campuses, the registered lease deed must have a remaining term of at least 30 years (or minimum 10 years for mega-cities).",
+      "severity": "critical",
+      "sourceReference": "AICTE Approval Process Handbook 2026-27, Chapter I, Norms for Land",
+      "effectiveDate": "2026-04-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "validity_date"
+    },
+    {
+      "id": "rule-eoa-006",
+      "ruleId": "RULE-INTAKE-RATIO",
+      "name": "Faculty to Student Ratio Compliance for Approved Intake",
+      "category": "Intake Change",
+      "description": "Engineering & Technology institutions requesting intake increment must maintain Cadre Ratio 1:2:6 and FSR of at least 1:20.",
+      "severity": "major",
+      "sourceReference": "AICTE Approval Process Handbook 2026-27, Appendix 7",
+      "effectiveDate": "2026-04-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "intake_ratio"
+    },
+    {
+      "id": "rule-eoa-007",
+      "ruleId": "RULE-BARRIER-FREE",
+      "name": "Barrier-Free Campus Infrastructure for Persons with Disabilities",
+      "category": "All Categories",
+      "description": "Campuses must submit verifiable photographic and architectural evidence of ramps, accessible elevators, and dedicated washrooms.",
+      "severity": "major",
+      "sourceReference": "Rights of Persons with Disabilities Act & AICTE Guidelines",
+      "effectiveDate": "2026-01-01",
+      "version": "2026.1",
+      "isEnabled": true,
+      "isDemonstrationRule": true,
+      "conditionType": "infrastructure_item"
+    }
+  ],
+  "auditTrail": [
+    {
+      "id": "audit-1792992321306-m5kxb2",
+      "timestamp": "2026-10-26T05:25:21.306Z",
+      "actorName": "Gemini 3.8 Flash",
+      "actorRole": "Regulatory Reviewer",
+      "action": "AI_DOCUMENT_ANALYSIS",
+      "recordId": "doc-001-1",
+      "outcome": "SUCCESS",
+      "details": "AI analysis performed on Affidavit_1_StampPaper_2026.pdf. Purpose: Regulatory compliance undertaking (Affidavit 1) required for Extension of Approval (EoA) under AICTE Approval Process Handbook regulations."
+    },
+    {
+      "id": "audit-001",
+      "timestamp": "2026-10-24T19:30:00Z",
+      "actorName": "Dr. Sunita Deshmukh",
+      "actorRole": "Verification Officer",
+      "action": "CONFIRM_FINDING",
+      "recordId": "f-005-1",
+      "outcome": "RECORDED",
+      "details": "Confirmed critical finding: Exact SHA-256 Duplicate File identified in app Universal Global Academy."
+    },
+    {
+      "id": "audit-002",
+      "timestamp": "2026-10-24T18:30:00Z",
+      "actorName": "System Rule Engine",
+      "actorRole": "Administrator",
+      "action": "RUN_VALIDATION",
+      "recordId": "app-004",
+      "outcome": "WARNING",
+      "details": "Automated validation completed. 1 major discrepancy flagged: PID cross-document mismatch."
+    },
+    {
+      "id": "audit-003",
+      "timestamp": "2026-10-24T16:05:00Z",
+      "actorName": "System Rule Engine",
+      "actorRole": "Administrator",
+      "action": "RUN_VALIDATION",
+      "recordId": "app-003",
+      "outcome": "WARNING",
+      "details": "Automated validation completed. 1 critical deficiency flagged: Expired Land Lease."
+    },
+    {
+      "id": "audit-004",
+      "timestamp": "2026-10-23T11:45:00Z",
+      "actorName": "Rajesh Varma",
+      "actorRole": "Regulatory Reviewer",
+      "action": "STATUS_CHANGE",
+      "recordId": "app-002",
+      "outcome": "SUCCESS",
+      "details": "Application status updated to Rectification Requested due to missing Fire NOC."
+    },
+    {
+      "id": "audit-005",
+      "timestamp": "2026-10-18T10:40:00Z",
+      "actorName": "System Verification Provider",
+      "actorRole": "Verification Officer",
+      "action": "EXTERNAL_SOURCE_VERIFY",
+      "recordId": "doc-001-2",
+      "outcome": "SUCCESS",
+      "details": "CIDCO Fire Safety certificate verified via state authority API endpoint."
+    }
+  ],
+  "authentications": [
+    {
+      "id": "auth-1",
+      "documentId": "doc-001-1",
+      "applicationId": "app-001",
+      "type": "qr_code",
+      "authorityName": "AICTE e-Affidavit Registry",
+      "referenceNumber": "AICTE-VERIFY:PID=1-10928374",
+      "timestamp": "2026-10-18T10:38:00Z",
+      "status": "Verified by authorized source",
+      "responseDetails": "Cryptographic hash confirmed against AICTE Central Registry snapshot."
+    },
+    {
+      "id": "auth-2",
+      "documentId": "doc-001-2",
+      "applicationId": "app-001",
+      "type": "issuing_authority_api",
+      "authorityName": "CIDCO Fire Services Verification Portal",
+      "referenceNumber": "CIDCO/FIRE/2025/9821",
+      "endpointUrl": "https://fire.cidco.gov.in/api/v1/verify",
+      "timestamp": "2026-10-18T10:40:00Z",
+      "status": "Verified by authorized source",
+      "responseDetails": "Status: ACTIVE | Valid Until: 31-Dec-2027 | Issuing Officer: CFO CIDCO"
+    },
+    {
+      "id": "auth-3",
+      "documentId": "doc-004-2",
+      "applicationId": "app-004",
+      "type": "issuing_authority_api",
+      "authorityName": "Anna University Affiliation Verification Service",
+      "referenceNumber": "AU/AFFIL/2026/MBA-8812",
+      "endpointUrl": "https://affiliation.annauniv.edu/api/verify",
+      "timestamp": "2026-10-21T11:20:00Z",
+      "status": "Mismatch detected",
+      "responseDetails": "Reference exists but Institute Name recorded is \"Sri Krishna Inst. of Applied Sciences and Research\" under PID 1-38291099."
+    }
+  ],
+  "anomalies": [
+    {
+      "id": "anom-1",
+      "applicationId": "app-005",
+      "documentId": "doc-005-1",
+      "title": "Exact Cryptographic Duplicate File (SHA-256 Collision Across Records)",
+      "reason": "The uploaded PDF file shares the exact identical SHA-256 hash with an affidavit uploaded for Saraswati College of Engineering.",
+      "evidence": "Hash: a7c4e5f2991038baec701e89b21f3c8a9120de8409384729104829fae1092837",
+      "detectionMethod": "sha256_exact_match",
+      "severity": "critical",
+      "limitations": "Hash match demonstrates identical binary file content; does not diagnose motive without human investigation.",
+      "suggestedNextStep": "Refer case to AICTE Vigilance and Regulation Bureau Standing Committee.",
+      "status": "pending_review"
+    },
+    {
+      "id": "anom-2",
+      "applicationId": "app-003",
+      "documentId": "doc-003-1",
+      "title": "Expired Statutory Tenancy Period Predating Application Year",
+      "reason": "Land lease deed terminated on 31-Dec-2025 prior to start of Academic Year 2026-2027.",
+      "evidence": "Extracted snippet: \"terminating on 31-Dec-2025\"",
+      "detectionMethod": "date_anomaly",
+      "severity": "critical",
+      "limitations": "Sub-registrar renewal endorsement may exist on a separate schedule not submitted by applicant.",
+      "suggestedNextStep": "Request certified lease extension addendum.",
+      "status": "pending_review"
+    },
+    {
+      "id": "anom-3",
+      "applicationId": "app-004",
+      "documentId": "doc-004-2",
+      "title": "Conflicting AICTE Permanent Institute Identifier (PID)",
+      "reason": "Affidavit cites PID 1-38291044 while University affiliation letter cites PID 1-38291099.",
+      "evidence": "Affidavit PID: 1-38291044 vs University Affiliation PID: 1-38291099",
+      "detectionMethod": "metadata_conflict",
+      "severity": "major",
+      "limitations": "Could be typographical error by university administrative clerk.",
+      "suggestedNextStep": "Request university registrar clarification letter.",
+      "status": "pending_review"
+    }
+  ],
+  "infrastructure": [
+    {
+      "id": "infra-1",
+      "applicationId": "app-001",
+      "category": "Classrooms",
+      "title": "Engineering Block Smart Classrooms",
+      "description": "12 Smart classrooms equipped with interactive displays, LAN connectivity, and acoustic insulation.",
+      "claimedSpecification": "12 Classrooms, 66 sq.m each (AICTE Norm: 66 sq.m per division)",
+      "imageUrl": "/src/assets/images/infrastructure_campus_sample_1792991511564.jpg",
+      "ocrDetectedText": "ROOM 301 - SMART CLASSROOM - CAPACITY 60 - DEPT OF COMPUTER ENGG",
+      "aiVisualObservations": "Architectural space displays modern tiered seating, ceiling mounted projector, emergency exit signs, and natural ventilation.",
+      "inspectionRecommendation": "Facility meets visual requirements for undergraduate intake of 420 students.",
+      "complianceState": "Apparent Match"
+    },
+    {
+      "id": "infra-2",
+      "applicationId": "app-001",
+      "category": "Barrier-Free Access",
+      "title": "Wheelchair Ramp and Accessible Entrance",
+      "description": "Ground level ramp with 1:12 slope and stainless steel handrails conforming to Rights of PwD Act.",
+      "claimedSpecification": "1:12 Gradient, tactile paving, width 1.8 meters",
+      "imageUrl": "/src/assets/images/infrastructure_campus_sample_1792991511564.jpg",
+      "ocrDetectedText": "RAMP 1 - ACCESSIBLE ENTRANCE FOR PERSONS WITH DISABILITIES",
+      "aiVisualObservations": "Paved ramp with dual continuous handrails and non-slip paving apparent at main entrance.",
+      "inspectionRecommendation": "Appears compliant with AICTE Barrier-Free norms.",
+      "complianceState": "Apparent Match"
+    },
+    {
+      "id": "infra-3",
+      "applicationId": "app-002",
+      "category": "Fire Safety System",
+      "title": "Fire Hydrant & Hose Reel System",
+      "description": "External ring hydrant and internal wet riser installation.",
+      "claimedSpecification": "Internal Wet Riser with 50,000L Overhead Static Fire Water Tank",
+      "aiVisualObservations": "Photographic evidence not provided in initial application packet.",
+      "inspectionRecommendation": "Mandatory physical verification required during scrutiny.",
+      "complianceState": "Physical Inspection Advised"
+    }
+  ],
+  "activeRole": "Administrator"
+}
